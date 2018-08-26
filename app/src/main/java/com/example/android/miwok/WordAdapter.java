@@ -16,20 +16,20 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
     public WordAdapter(Context context, ArrayList<Word> words) {
         super(context, 0, words);
-        mContext=context;
+        mContext = context;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater=LayoutInflater.from(mContext);
+        LayoutInflater inflater = LayoutInflater.from(mContext);
         View view = convertView;
-        if (view==null){
-            view=inflater.inflate(R.layout.list_item, parent, false);
+        if (view == null) {
+            view = inflater.inflate(R.layout.list_item, parent, false);
         }
-        Word word=getItem(position);
-        TextView defaultText=view.findViewById(R.id.textView_numbers_english);
-        TextView miwokText=view.findViewById(R.id.textView_numbers_miwok);
+        Word word = getItem(position);
+        TextView defaultText = view.findViewById(R.id.textView_numbers_english);
+        TextView miwokText = view.findViewById(R.id.textView_numbers_miwok);
         defaultText.setText(word.getDefaultWord());
         miwokText.setText(word.getMiwokWord());
         return view;

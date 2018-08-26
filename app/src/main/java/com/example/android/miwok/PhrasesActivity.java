@@ -27,7 +27,7 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phrases);
-        ArrayList<Word> phrases= new ArrayList<>();
+        ArrayList<Word> phrases = new ArrayList<>();
         phrases.add(new Word("Where are you going?", "minto wuksus"));
         phrases.add(new Word("What is your name?", "tinnә oyaase'nә"));
         phrases.add(new Word("My name is...", "oyaaset..."));
@@ -38,8 +38,8 @@ public class PhrasesActivity extends AppCompatActivity {
         phrases.add(new Word("I’m coming.", "әәnәm"));
         phrases.add(new Word("Let’s go.", "yoowutis"));
         phrases.add(new Word("Come here.", "әnni'nem"));
-        WordAdapter listAdapter=new WordAdapter(this, phrases);
-        ListView list =findViewById(R.id.list_phrases);
+        WordAdapter listAdapter = new WordAdapter(this, phrases);
+        ListView list = findViewById(R.id.list_phrases);
         list.setAdapter(listAdapter);
     }
 }

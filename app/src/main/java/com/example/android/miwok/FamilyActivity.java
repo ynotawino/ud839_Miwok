@@ -27,7 +27,7 @@ public class FamilyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family);
-        ArrayList<Word> family= new ArrayList<>();
+        ArrayList<Word> family = new ArrayList<>();
         family.add(new Word("father", "әpә"));
         family.add(new Word("mother", "әṭa"));
         family.add(new Word("son", "angsi"));
@@ -38,8 +38,8 @@ public class FamilyActivity extends AppCompatActivity {
         family.add(new Word("younger sister", "kolliti"));
         family.add(new Word("grandmother", "ama"));
         family.add(new Word("grandfather", "paapa"));
-        WordAdapter listAdapter=new WordAdapter(this, family);
-        ListView list =findViewById(R.id.list_family);
+        WordAdapter listAdapter = new WordAdapter(this, family);
+        ListView list = findViewById(R.id.list_family);
         list.setAdapter(listAdapter);
     }
 }
