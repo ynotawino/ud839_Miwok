@@ -1,43 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/list_item_height"
-    android:orientation="horizontal"
-    android:background="@color/tan_background">
+    android:background="@color/tan_background"
+    android:orientation="horizontal">
 
     <ImageView
-        android:layout_gravity="center"
         android:id="@+id/image_item"
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height"
-        tools:src="@mipmap/ic_launcher"
-        android:scaleType="fitCenter" />
-    <LinearLayout
-        android:gravity="center_vertical"
-        android:paddingLeft="16dp"
-        tools:background="@color/category_numbers"
         android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        tools:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
         android:id="@+id/textViews_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:id="@+id/textView_numbers_miwok"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="lutti" />
+        android:paddingLeft="16dp"
+        tools:background="@color/category_numbers">
 
-        <TextView
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:id="@+id/textView_numbers_english"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_numbers_miwok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="lutti" />
+
+            <TextView
+                android:id="@+id/textView_numbers_english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="text" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="text" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/ic_play_arrow" />
+
     </LinearLayout>
+
 
 </LinearLayout>

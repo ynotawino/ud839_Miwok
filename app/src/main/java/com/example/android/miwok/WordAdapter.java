@@ -1,7 +1,6 @@
 package com.example.android.miwok;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -20,7 +19,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     public WordAdapter(Context context, ArrayList<Word> words, int color) {
         super(context, 0, words);
         mContext = context;
-        this.color=color;
+        this.color = color;
     }
 
     @NonNull
@@ -34,8 +33,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         Word word = getItem(position);
         TextView defaultText = view.findViewById(R.id.textView_numbers_english);
         TextView miwokText = view.findViewById(R.id.textView_numbers_miwok);
-        ImageView image=view.findViewById(R.id.image_item);
-        ViewGroup textViews=view.findViewById(R.id.textViews_list);
+        ImageView image = view.findViewById(R.id.image_item);
+        ViewGroup textViews = view.findViewById(R.id.textViews_list);
         defaultText.setText(word.getDefaultWord());
         miwokText.setText(word.getMiwokWord());
         image.setImageResource(word.getImage());
